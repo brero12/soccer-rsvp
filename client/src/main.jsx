@@ -7,6 +7,7 @@ import AdminLayout from "./pages/admin/AdminLayout";
 import AdminHome from "./pages/admin/AdminHome";
 import GamesList from "./pages/admin/GamesList";
 import GameForm from "./pages/admin/GameForm";
+import Landing from "./pages/Landing";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -18,7 +19,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="games/new" element={<GameForm />} />
         <Route path="games/:id/edit" element={<GameForm />} />
       </Route>
-      <Route path="*" element={<p className="p-6">Open the link shared in your group.</p>} />
+      <Route path="*" element={<Landing />} />
     </Routes>
   </BrowserRouter>
 );
