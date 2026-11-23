@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/index.js",
     "seed": "node src/seed.js",
-    "build": "npm --prefix client install && npm --prefix client run build"
+    "build": "npm --prefix client install --include=dev && npm --prefix client run build"
   },
   "keywords": [],
   "author": "",
