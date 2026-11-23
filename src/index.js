@@ -8,7 +8,24 @@ const { loadSession } = require("./middleware/auth");
 
 const app = express();
 app.set("trust proxy", 1); // Render sits behind a proxy (needed for secure cookies and rate limits)
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+      "script-src": ["'self'", "https://apis.google.com"],
+      "frame-src": ["'self'", "https://accounts.google.com", "https://*.firebaseapp.com"],
+      "connect-src": [
+        "'self'",
+        "https://identitytoolkit.googleapis.com",
+        "https://securetoken.googleapis.com",
+        "https://www.googleapis.com",
+      ],
+      "img-src": ["'self'", "data:", "https://*.googleusercontent.com"],
+    },
+  },
+  // Helmet's default blocks the Google popup from talking back to your page
+  crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+}));
 app.use(express.json({ limit: "100kb" }));
 app.use(cookieParser());
 app.use(loadSession);
