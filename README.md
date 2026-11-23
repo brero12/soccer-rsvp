@@ -2,9 +2,11 @@
 
 A mobile-first web app that replaces the manual RSVP lists posted in WhatsApp groups for weekly pickup soccer games. Players sign up in one tap from a shared link, and admins manage the games from a dashboard.
 
-**Live demo:** [Soccer RSVP Demo Landing](https://soccer-rsvp.onrender.com/) · **Admin demo:** [Soccer RSVP Demo Admin](https://soccer-rsvp.onrender.com/admin) phone: +11234567890 pass: Test.2026
+**Live demo:** [Soccer RSVP Demo Landing](https://soccer-rsvp.onrender.com/) · **Admin demo:** [Soccer RSVP Demo Admin](https://soccer-rsvp.onrender.com/admin) phone: +14165550142 pass: Test.2026
 
-![Screenshot](docs/screenshot-game.png)
+![Screenshot Landing](docs/screenshot-landing.png)
+![Screenshot Dashboard 1](docs/screenshot-admin-dashboard_1.png)
+![Screenshot dashboard 2](docs/screenshot-admin-dashboard_2.png)
 
 ## The problem
 

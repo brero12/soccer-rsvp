@@ -7,3 +7,4 @@ client/dist
 *-firebase-adminsdk-*.json
 key.json
 .DS_Store
+scripts/
